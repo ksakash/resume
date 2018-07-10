@@ -1,3 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a modified ONE COLUMN version of
+% the following template:
+% 
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
 \begin{document}
 
 \lastupdated
@@ -6,30 +58,45 @@
 }
 
 \section{Experience}
+
+\runsubsection{Google Summer of Code}
+\descript{| \href{https://robocomp.github.io/web/}{Robocomp}}
+\location{May 2018 – Aug 2018 | MENTORS: Marco A Gutiérrez and Ramon Cintas}
+\begin{tightemize}
+\item The project aims to integrate \href{https://robocomp.github.io/web/}{Robocomp}, a robotic framework, with a 3D robotic simulator, \href{http://gazebosim.org}{Gazebo}, using \href{https://doc.zeroc.com/ice/3.6/}{zeroc-ice} as a communication middleware.
+\item Used gazebo plugins for robotics interfaces, corresponding to different sensors and actuators, to communicate with the Gazebo simulator.
+\item The integration will allow developers more options from the framework and provide a better simulation with a more realistic physics engine.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Traffic Light Detection using Deep Leaning}
+\descript{| NYU-IITK Research Track}
+\location{June 2018 – July 2018 | Prof. Yi Fang (New York University)}
+\begin{tightemize}
+\item The project aims to develop a light weight traffic light detection model based on Deep Learning, using various using various model compression techniques.
+\item Developed a R-FCN (Region Based Fully Connected Network) model using object-detection tensorflow apis. 
+\item Built a feature extractor, using keras, to extract high level features from a trained network, in order to build the meta architecture R-FCN on top of it and retrain it using transfer learning.
+\end{tightemize}
+\sectionsep
+
 \runsubsection{Autonomous Underwater Vehicle}
 \descript{| underwater robotics team, iitk }
-\location{February 2017 – Present | Prof. Sachin Y. Shinde}
+\location{February 2017 – Present | MENTOR: Prof. Sachin Y. Shinde}
 \begin{tightemize}
 \item Developed a \href{https://github.com/ksakash/auv2017-1/blob/IP/task_handler_layer/ip.md}{image processing pipeline}, which can enhance raw underwater images coming from the live video stream through a camera, denoise it and threshold it, to get essential information about objects present before the bot. 
-\item Added a feature to a ROS package which enables to save its node parameters during runtime and save it in a yaml file with the help of \href{http://wiki.ros.org/dynamic_reconfigure}{dynamic\_reconfigure} package provided by ROS.
-\item Made \href{https://github.com/ksakash/IP_SAUVC/}{Vision Processing ROS package} which takes images from a continuous video stream coming from the camera and perform image processing on it to get essential information about objects present before the bot with features like dynamic reconfiguration of node parameters, using OpenCV library and implemented in c++, in order to perform particular tasks in \href{https://sauvc.org/}{SAUVC 2018}.
+\item Developed \href{https://github.com/ksakash/IP_SAUVC/}{Vision Processing ROS package} using OpenCV library and implemented in c++, in order to perform particular tasks in \href{https://sauvc.org/}{SAUVC 2018}.  
 \item Worked on Feature Extraction and Matching using various algorithms like SURF, SHIFT, etc. to recognize a known object in a particular scene.
 \item Working on developing image enhancement techniques for underwater images.
-\item Working on object recognition and object classification using machine learning to classify between the targets underwater.
+\item Developed a PID based controller for the vehicle to achieve a particular state.
+\item Developed motion module for the robot, using actionlib provided by ROS, which is responsible for moving the robot on getting a goal from the vision module.
 \end{tightemize}
+\sectionsep
 
-\runsubsection{TIC-TAC-TOE}
-\descript{| REINFORCEMENT LEARNING}
-\location{Nov 2017 - Present | Prof. Nisheeth Srivastava, CSE, IITK}
-\begin{tightemize}
-\item Developing a game agent to learn the game of TIC-TAC-TOE, of varied sizes, using reinforcement learning to find out the trade-off in the performance between using GREEDY policy over EXPLORATORY policy with the increasing grid size.
-\end{tightemize}
 \runsubsection{CLUB AUTOMATION}
 \descript{| Winter Camp }
 \location{December 2016| Robotics Club, IITK}
 \begin{tightemize}
-\item Developed a motion detector automate the light switching in a room using Arduino and PIR sensors to prevent any
-electricity wastage.
+\item Developed a motion detector automate the light switching in a room using Arduino and PIR sensors to prevent any electricity wastage.
 \end{tightemize}
 
 \sectionsep
@@ -55,11 +122,11 @@ CGPA : 10/10
 \sectionsep
 
 \section{Skills}
-Image Processing \textbullet{} Computer Vision (Basics) \textbullet{} Linux Command Line \textbullet{} Robotics
+Image Processing \textbullet{} Computer Vision \textbullet{} Linux Command Line \textbullet{} Robotics \textbullet{} 3D simulation
 \section{Languages}
-C \textbullet{}   C++ \textbullet{} Python \textbullet{} LATEX \textbullet{} HTML \textbullet{} CSS
+C \textbullet{}   C++ \textbullet{} Python \textbullet{} LATEX \textbullet{} HTML \textbullet{} CSS \textbullet{} Typescript \textbullet{} shell(bash)
 \section{Tools}
-ROS \textbullet{} OpenCV \textbullet{} Git \textbullet{} SolidWorks \textbullet{} Arduino \textbullet{} Gazebo
+ROS \textbullet{} OpenCV \textbullet{} Git \textbullet{} SolidWorks \textbullet{} Arduino \textbullet{} Gazebo \textbullet{} zeroc-ice \textbullet{} Angular \textbullet{} Tensorflow \textbullet{} Keras \textbullet{} GNU octave
 \sectionsep
 \hfill
 
@@ -69,18 +136,18 @@ ROS \textbullet{} OpenCV \textbullet{} Git \textbullet{} SolidWorks \textbullet{
 \sectionsep
 
 \section{Courses}
-Introduction to probability and Statistics (ONGOING) \\
-Control Systems (ONGOING) \\
-Introduction to Microelectronics (ONGOING) \\
+Introduction to probability and Statistics \\
+Control Systems \\
+Introduction to Microelectronics \\
 Signal, Systems and Networks \\
 Fundamentals of Programming \\
+Data Structures and Algorithms (Upcoming)
 \sectionsep
 
 \section{other campus activities}
-July 2017 - Present | Secretary, Robotics Club, IIT Kanpur \\
-July 2017 - Present | Secretary, Fine Arts Club, IIT Kanpur \\ 
+July 2017 - Mar 2018 | Secretary, Robotics Club, IIT Kanpur \\
+July 2017 - Mar 2018 | Secretary, Fine Arts Club, IIT Kanpur \\ 
 Feb 2017 | Junior executive, Marketing, Techkriti 2017
 
 
-\end{document}
-
+\end{document}  \documentclass[]{article}

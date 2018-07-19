@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{AKASH}{KUMAR SINGH}{ 
+\href{mailto:ksakash@iitk.ac.in}{ksakash@iitk.ac.in} | +91-7318019013 | \href{github.com/ksakash}{Github:ksakash}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{INDIAN INSTITITE OF}
+\subsection{TECHNOLOGY, KANPUR}
+\descript{B.Tech, Electrical Engineering}
+\location{July 2016- Exp. April 2020}
+\location{Kanpur, UP, INDIA}
+CPI : 8.1/10
+\sectionsep
+
+\subsection{D.A.V. PUBLIC SCHOOL,}
+\subsection{NTS BARKAKANA, C.C.L.}
+\descript{AISSCE}
+\location{June 2014 - March 2016}
+\location{Ramgarh, Jharkahnd, INDIA}
+Result : 93.4\%
+\sectionsep
+
+\subsection{D.A.V. PUBLIC SCHOOL,}
+\subsection{URIMARI}
+\descript{AISSE}
+\location{March 2014}
+\location{Hazaribagh, Jharkahnd, INDIA}
+CGPA : 10/10
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Introduction to probability and Statistics \\
+Control Systems \\
+Introduction to Microelectronics \\
+Signal, Systems and Networks \\
+Essentials of Scientific Computing \\
+Introduction to Electronics \\
+Data Structures \& Algorithms (Upcoming) \\
+Principles of Communication (Upcoming)
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+Image Processing \textbullet{} Computer Vision \\
+Linux Command Line \textbullet{} Robotics  \\ 
+3D simulation
+\sectionsep
+
+\section{LANGUAGES}
+C \textbullet{}   C++ \textbullet{} Python \textbullet{} LATEX \textbullet{} HTML \textbullet{} CSS \\
+Typescript \textbullet{} shell (bash)
+\sectionsep
+
+\section{Tools}
+ROS \textbullet{} OpenCV \textbullet{} Git \textbullet{} SolidWorks \\ 
+Arduino \textbullet{} Gazebo \textbullet{} zeroc-ice \textbullet{} Angular \\
+Tensorflow \textbullet{} Keras \textbullet{} GNU octave
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Google Summer of Code}
+\descript{| \href{https://robocomp.github.io/web/}{Robocomp}}
+\location{May 2018 – Aug 2018 | MENTORS: Marco A Gutiérrez and Ramon Cintas}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item The project aims to integrate \href{https://robocomp.github.io/web/}{Robocomp}, a robotic framework, with a 3D robotic simulator, \href{http://gazebosim.org}{Gazebo}, using \href{https://doc.zeroc.com/ice/3.6/}{zeroc-ice} as a communication middleware.
+\item Used gazebo plugins for robotics interfaces, corresponding to different sensors and actuators, to communicate with the Gazebo simulator.
+\item The integration will allow developers more options from the framework and provide a better simulation with a more realistic physics engine.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Autonomous Underwater Vehicle}
+\descript{| underwater robotics team, iitk }
+\location{February 2017 – Present | MENTOR: Prof. Mangal Kothari}
+\begin{tightemize}
+\item Developed an \href{https://github.com/ksakash/auv2017-1/blob/IP/task_handler_layer/ip.md}{image processing pipeline}, which can enhance raw underwater images coming from a live video stream through a camera and get essential information about objects present before the robot. 
+\item Developed \href{https://github.com/ksakash/IP_SAUVC/}{Vision Processing ROS package} using OpenCV library and implemented in c++, in order to perform particular tasks in \href{https://sauvc.org/}{SAUVC 2018}.  
+\item Worked on Feature Extraction and Matching using various algorithms like SURF, SHIFT, etc. to recognize a known object in a particular scene.
+\item Working on developing image enhancement techniques for underwater images.
+\item Developed a PID based controller for the vehicle to achieve a particular state and configuration for the robot.
+\item Developed motion module for the robot, using actionlib provided by ROS, which is responsible for moving the robot on getting a goal from the vision module.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{TIC-TAC-TOE}
+\descript{| Reinforcement Learning }
+\location{November 2017 - April 2018| \href{http://home.iitk.ac.in/~nsrivast/}{Prof. Nisheeth Srivastava}}
+\begin{tightemize}
+\item The project aims to help an artificial agent learn to play tic-tac-toe game with the help of a  reinforcement learning algorithm called Temporal Difference Learning.
+\item Further we used the technique of representing the states by set of feature vectors to reduce the state space in order to reduce the time complexity of the algorithm used.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CLUB AUTOMATION}
+\descript{| Winter Camp }
+\location{December 2016| Robotics Club, IITK}
+\begin{tightemize}
+\item Developed a motion detector automate the light switching in a room using Arduino and PIR sensors to prevent any electricity wastage.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{scholastic achievements} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Secured rank 3146 at National level in JEE Mains 2016 \\ 
+\item Secured rank 2477 at National level in JEE Advanced 2016
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     OTHERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{OTHER Campus activities}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Secretary, Robotics Club, IIT Kanpur | July 2017 - Mar 2018 \\
+\item Secretary, Fine Arts Club, IIT Kanpur | July 2017 - Mar 2018 \\
+\end{tightemize}
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}

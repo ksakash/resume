@@ -1,7 +1,4 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is a modified ONE COLUMN version of
-% the following template:
-% 
 % Deedy - One Page Two Column Resume
 % LaTeX Template
 % Version 1.1 (30/4/2014)
@@ -52,16 +49,116 @@
 
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \namesection{AKASH}{KUMAR SINGH}{ 
-\href{mailto:ksakash@iitk.ac.in}{ksakash@iitk.ac.in} | +91-7318019013 | \href{github.com/ksakash}{Github:ksakash}
-}
+\href{mailto:ksakash@iitk.ac.in}{ksakash@iitk.ac.in} | +91-7318019013 | \href{github.com/ksakash}{Github:ksakash}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{INDIAN INSTITITE OF}
+\subsection{TECHNOLOGY, KANPUR}
+\descript{B.Tech, Electrical Engineering}
+\location{July 2016- Exp. April 2020}
+\location{Kanpur, UP, INDIA}
+CPI : 8.1/10
+\sectionsep
+
+\subsection{D.A.V. PUBLIC SCHOOL,}
+\subsection{NTS BARKAKANA, C.C.L.}
+\descript{AISSCE}
+\location{June 2014 - March 2016}
+\location{Ramgarh, Jharkahnd, INDIA}
+Result : 93.4\%
+\sectionsep
+
+\subsection{D.A.V. PUBLIC SCHOOL,}
+\subsection{URIMARI}
+\descript{AISSE}
+\location{March 2014}
+\location{Hazaribagh, Jharkahnd, INDIA}
+CGPA : 10/10
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Introduction to probability and Statistics \\
+Control Systems \\
+Introduction to Microelectronics \\
+Signal, Systems and Networks \\
+Essentials of Scientific Computing \\
+Introduction to Electronics \\
+Data Structures \& Algorithms (Upcoming) \\
+Principles of Communication (Upcoming)
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+Image Processing \textbullet{} Computer Vision \\
+Linux Command Line \textbullet{} Robotics  \\ 
+3D simulation
+\sectionsep
+
+\section{LANGUAGES}
+C \textbullet{}   C++ \textbullet{} Python \textbullet{} LATEX \textbullet{} HTML \textbullet{} CSS \\
+Typescript \textbullet{} shell (bash)
+\sectionsep
+
+\section{Tools}
+ROS \textbullet{} OpenCV \textbullet{} Git \textbullet{} SolidWorks \\ 
+Arduino \textbullet{} Gazebo \textbullet{} zeroc-ice \textbullet{} Angular \\
+Tensorflow \textbullet{} Keras \textbullet{} GNU octave
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experience}
 
 \runsubsection{Google Summer of Code}
 \descript{| \href{https://robocomp.github.io/web/}{Robocomp}}
 \location{May 2018 – Aug 2018 | MENTORS: Marco A Gutiérrez and Ramon Cintas}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item The project aims to integrate \href{https://robocomp.github.io/web/}{Robocomp}, a robotic framework, with a 3D robotic simulator, \href{http://gazebosim.org}{Gazebo}, using \href{https://doc.zeroc.com/ice/3.6/}{zeroc-ice} as a communication middleware.
 \item Used gazebo plugins for robotics interfaces, corresponding to different sensors and actuators, to communicate with the Gazebo simulator.
@@ -69,21 +166,11 @@
 \end{tightemize}
 \sectionsep
 
-\runsubsection{Traffic Light Detection using Deep Leaning}
-\descript{| NYU-IITK Research Track}
-\location{June 2018 – July 2018 | Prof. Yi Fang (New York University)}
-\begin{tightemize}
-\item The project aims to develop a light weight traffic light detection model based on Deep Learning, using various using various model compression techniques.
-\item Developed a R-FCN (Region Based Fully Connected Network) model using object-detection tensorflow apis. 
-\item Built a feature extractor, using keras, to extract high level features from a trained network, in order to build the meta architecture R-FCN on top of it and retrain it using transfer learning.
-\end{tightemize}
-\sectionsep
-
 \runsubsection{Autonomous Underwater Vehicle}
 \descript{| underwater robotics team, iitk }
 \location{February 2017 – Present | MENTOR: Prof. Mangal Kothari}
 \begin{tightemize}
-\item Developed a \href{https://github.com/ksakash/auv2017-1/blob/IP/task_handler_layer/ip.md}{image processing pipeline}, which can enhance raw underwater images coming from the live video stream through a camera, denoise it and threshold it, to get essential information about objects present before the bot. 
+\item Developed an \href{https://github.com/ksakash/auv2017-1/blob/IP/task_handler_layer/ip.md}{image processing pipeline}, which can enhance raw underwater images coming from a live video stream through a camera and get essential information about objects present before the robot. 
 \item Developed \href{https://github.com/ksakash/IP_SAUVC/}{Vision Processing ROS package} using OpenCV library and implemented in c++, in order to perform particular tasks in \href{https://sauvc.org/}{SAUVC 2018}.  
 \item Worked on Feature Extraction and Matching using various algorithms like SURF, SHIFT, etc. to recognize a known object in a particular scene.
 \item Working on developing image enhancement techniques for underwater images.
@@ -98,56 +185,31 @@
 \begin{tightemize}
 \item Developed a motion detector automate the light switching in a room using Arduino and PIR sensors to prevent any electricity wastage.
 \end{tightemize}
-
 \sectionsep
 
-\section{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\runsubsection{INDIAN INSTITITE OF TECHNOLOGY, KANPUR}
-\descript{| B.Tech in Electrical Engineering}
-\location{July 2016- April 2020 | Kanpur, Uttar Pradesh (INDIA)}
-CPI : 8.1/10
+\section{scholastic achievements} 
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Secured rank 3146 at National level in JEE Mains 2016 \\ 
+\item Secured rank 2477 at National level in JEE Advanced 2016
+\end{tightemize}
 \sectionsep
 
-\runsubsection{D.A.V. PUBLIC SCHOOL, NTS BARKAKANA, C.C.L.}
-\descript{| AISSCE}
-\location{June 2014 - March 2016 | Ramgarh, Jharkahnd (INDIA)}
-Result : 93.4\%
-\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     OTHERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\runsubsection{D.A.V. PUBLIC SCHOOL, URIMARI}
-\descript{| AISSE}
-\location{March 2014 | Hazaribagh, Jharkahnd (INDIA)}
-CGPA : 10/10
-\sectionsep
+\section{OTHER Campus activities}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Secretary, Robotics Club, IIT Kanpur | July 2017 - Mar 2018 \\
+\item Secretary, Fine Arts Club, IIT Kanpur | July 2017 - Mar 2018 \\
+\end{tightemize}
 
-\section{Skills}
-Image Processing \textbullet{} Computer Vision \textbullet{} Linux Command Line \textbullet{} Robotics \textbullet{} 3D simulation
-\section{Languages}
-C \textbullet{}   C++ \textbullet{} Python \textbullet{} LATEX \textbullet{} HTML \textbullet{} CSS \textbullet{} Typescript \textbullet{} shell(bash)
-\section{Tools}
-ROS \textbullet{} OpenCV \textbullet{} Git \textbullet{} SolidWorks \textbullet{} Arduino \textbullet{} Gazebo \textbullet{} zeroc-ice \textbullet{} Angular \textbullet{} Tensorflow \textbullet{} Keras \textbullet{} GNU octave
-\sectionsep
-\hfill
 
-\section{Scholastic Achievements}
- Secured rank 3146 at National level in JEE Mains 2016. \\ 
- Secured rank 2477 at National level in JEE Advanced 2016.
-\sectionsep
-
-\section{Courses}
-Introduction to probability and Statistics \\
-Control Systems \\
-Introduction to Microelectronics \\
-Signal, Systems and Networks \\
-Essentials of Scientific Computing \\
-Introduction to Electronics \\
-Data Structures and Algorithms (Upcoming) \\
-Principles of communication (Upcoming)
-\sectionsep
-
-\section{other campus activities}
-July 2017 - Mar 2018 | Secretary, Robotics Club, IIT Kanpur \\
-July 2017 - Mar 2018 | Secretary, Fine Arts Club, IIT Kanpur \\
-
+\end{minipage} 
 \end{document}  \documentclass[]{article}

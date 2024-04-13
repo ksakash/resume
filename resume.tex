@@ -1,0 +1,280 @@
+\documentclass[a4paper]{MagicalCV}
+
+% Removing page numbers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% Change the geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=.4cm, footskip=.5cm}
+
+% Defining your colors
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Color for highlights
+% awesome-purple
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% start document
+\begin{document}
+
+% Last update time
+\lastupdated
+
+% Title name
+\namesection{}{Akash Kumar Singh}{\fontsize{6pt}{1em}{
+\phone{7318019013} \email{\href{mailto:akashsingh049811@gmail.com}{akashsingh049811@gmail.com}} \github{\href{https://www.github.com/ksakash}{ksakash}} \linkedin{\href{https://www.linkedin.com/in/ksakash04}{ksakash04}}}}
+
+% Column one
+ 
+\begin{minipage}[t]{0.5\textwidth} 
+
+% Experience
+\cvsection{Experience}
+
+% \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+
+\begin{cventries}
+  \cventry
+    {\boldgray{Software Development Engineer 2}} % Job title
+    {Flipkart Internet Pvt. Ltd.} % Organization
+    {Bangalore, India} % Location
+    {March 2023 - Present} % Date(s)
+    {
+        \vspace*{-\baselineskip}
+        \item \hspace{2pt} \boldgray{API Gateway}
+        \begin{itemize}[leftmargin=6mm]
+            \item {Worked on developing an API Gateway service, using \textbf{Spring Cloud} framework, as a single point of entry for multiple backend services.}
+            \item {Implemented AuthN \& AuthZ following \textbf{OAuth2.0} with route level \textbf{rate-limiting} and \textbf{circuit breaking} capabilities.}
+            \item {Containerized the application and deployed on a k8s cluster in production.}
+        \end{itemize}
+        \vspace{4pt}
+        \item \hspace{2pt} \boldgray{StoreFront - Flipkart in a box}
+        \begin{itemize}[leftmargin=6mm]
+            \item {Worked on developing \textbf{Storefront}, a module for \textit{FK in a box} to serve targetted content on HomePage of a marketplace.}
+            \item {Adopted and reused existing services with high availability requirements using \textbf{Guava cache} and \textbf{Embedded-Solr} for low latency.}
+            \item {Worked on creating a near real time \textbf{Spark streaming} data pipeline, deployed on \textbf{Dataproc} (GCP) cluster, handling high throughput data streams with low latency requirements, capable of taking inputs from various streaming sources such as \textbf{Kafka}. Used various datastores to achieve different objectives like \textbf{Aerospike} as intermediate datastore and \textbf{Hbase} as the primary datastore.}
+        \end{itemize}
+        \vspace{4pt}
+        \item \hspace{2pt} \boldgray{Reporting Framework}
+        \begin{itemize}[leftmargin=6mm]
+            \item {Developed a service to provide real-time responses on top of large datasets for complex analytical queries needed by various reports on UI dashboard, using \href{https://clickhouse.com/}{\textbf{Clickhouse}} as data-warehouse.}
+            \item {Built a data pipeline to transfer data from primary datastore (MySQL) to Clickhouse using \textbf{Debezium} and \textbf{Kafka Connect}}
+        \end{itemize}
+        \vspace{4pt}
+        \item \hspace{2pt} \boldgray{Assortment Intelligence}
+        \begin{itemize}[leftmargin=6mm]
+            \item {Took ownership of implementing a new product offering called \textbf{Assortment Intelligence for clients}, aimed at providing insights about their inventory to give them an edge over their competitors.}
+            \item {Designed \textbf{REST APIs} for a self-serve UI application, automating client registration and data ingestion with various configuration options.}
+        \end{itemize}
+    }
+
+  \cventry
+    {\boldgray{Software Development Engineer 1}} % Job title
+    {} % Organization
+    {} % Location
+    {June 2021 - Feb 2023} % Date(s)
+    {
+        \vspace*{-\baselineskip}
+        \item \hspace{2pt} \boldgray{Product matching and optimisation}
+        \begin{itemize}[leftmargin=6mm]
+            \item {Optimized Product matching algorithm using \textbf{parallelisation} which reduced run time from 7 days to 5 hours \textbf{(98\% reduction)} and \textbf{decreased memory utilization by 75\%}.}
+            \item {Implemented \textbf{image similarity search} in product match algorithm which \textbf{improved match rate by 3400\%}.}
+            \item Used a vanilla \href{https://en.wikipedia.org/wiki/Autoencoder}{\textbf{Autoencoder}} (a type of DNN) to convert images to embeddings, for Vector Indexing using \href{https://faiss.ai/index.html}{\textbf{FAISS}}
+            \item Used \href{https://www.sbert.net/}{\textbf{Sentence Transformers}} to convert text embeddings and built a Vector Index on top of it for textual similarity / semantic search.
+        \end{itemize}
+        \vspace{4pt}
+        \item \hspace{2pt} \boldgray{Web scraping}
+        \begin{itemize}[leftmargin=6mm]
+            \item {Rebuilt web scraping service from scratch using \href{https://playwright.dev/}{\textbf{Playwright}} and \textbf{BeautifulSoup}. Improved testing and debugging capabilities of web crawlers and transformed the component into an independent service.}
+        \end{itemize}
+        \vspace{4pt}
+        \item \hspace{2pt} \boldgray{Competitive Intelligence for brands}
+        \begin{itemize}[leftmargin=6mm]
+            \item {Took ownership for repurposing of an existing product, \textbf{Competitive Intelligence}, for brands, aimed at giving insights about their competitiveness with other brands across different channels}
+            \item {Spearheaded the redesign of the existing crawling system, leveraging advanced technologies such as \textbf{RabbitMQ} and \textbf{Celery} to enable large-scale operations while implementing robust tracking and monitoring features for multiple tenants.}
+        \end{itemize}
+    }
+
+\end{cventries}
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.49\textwidth} 
+
+% Education
+\cvsection{Education} 
+
+\begin{cventries}
+  \cventry
+    {B.T. (7.8 CGPA) - M.T. (9.0 CGPA) in Electrical Engineering} % Degree
+    {IIT, Kanpur} % Institution
+    {Kanpur, India} % Location
+    {July 2016 - April 2021} % Date(s)
+    {}
+\vspace*{-2mm}
+  \cventry
+    {AISSCE, CBSE, 93.4\%}
+    {D.A.V. Public School, NTS BKN, C.C.L.}
+    {JH, India}
+    {June 2014 - April 2016}
+    {}
+\vspace*{-2mm}
+  \cventry
+    {AISSE, CBSE, 10 CGPA}
+    {D.A.V. Public School, Urimari}
+    {JH, India}
+    {April 2014}
+    {}    
+\end{cventries}
+
+% Links
+% \cvsection{Links}
+
+% \github{GitHub} \href{https://github.com/themagicalmammal}{\bf themagicalmammal} \\
+% \linkedin{Linkedin} \href{https://www.linkedin.com/in/themagicalmammal/}{\bf themagicalmammal}
+% \sectionsep
+\vspace*{-\baselineskip}
+
+\cvsection{Internships}
+\begin{cventries}
+
+\cventry
+  {\boldgray{Student Software Developer}}
+  {GSoC (2020), Robocomp}
+  {IIT Kanpur, India}
+  {May 2020 - Aug 2020}
+  {
+    \vspace*{-\baselineskip}
+    \item \hspace{2pt} \boldgray{\href{https://github.com/robocomp/robocomp/tree/development/libs/innermodel-python3}{Python bindings for InnerModel Library}}
+    \begin{itemize}[leftmargin=6mm]
+        \item Used \href{https://pybullet.org/wordpress/}{\textbf{PyBullet}}, an open source Physics engine, to rewrite existing C++ Library in Python, supporting all the entities (sensors, actuators, etc.) provided by \href{https://github.com/robocomp/robocomp}{Robocomp} framework.
+    \end{itemize}
+    }
+
+    \cventry
+      {\boldgray{Research Intern}}
+      {RTC, Robert Bosch}
+      {Bangalore, India}
+      {May 2019 - July 2019}
+      {
+         \vspace*{-\baselineskip}
+         \item \hspace{2pt} \boldgray{Multi-model Semantic Segmentation}
+          \begin{itemize}[leftmargin=6mm]
+            \item The idea was to improve the performance of \textbf{semantic segmentation} on 2D RGB images using data from \textbf{LiDAR} point clouds for an autonomous driving car.
+            \item Used \href{https://carla.org/}{\textbf{CARLA}} (Open Source Simulator) to generate labelled point clouds along with the open-source \href{https://apolloscape.auto/}{Apolloscape} data to train a 3D semantic segmentation network, \href{https://github.com/charlesq34/pointnet2}{\textbf{Pointnet++}}, and compared the results with networks trained on real world data.
+          \end{itemize}
+      }
+
+\cventry
+  {\boldgray{Student Software Developer}}
+  {GSoC (2018), Robocomp}
+  {IIT Kanpur, India}
+  {May 2018 - Aug 2018}
+  {
+    \vspace*{-\baselineskip}
+    \item \hspace{2pt} \boldgray{Gazebo-RoboComp Integration}
+    \begin{itemize}[leftmargin=6mm]
+        \item The project aimed to integrate \href{https://robocomp.github.io/web/}{Robocomp}, a robotic framework, with a 3D robotic simulator, \href{http://gazebosim.org}{\textbf{Gazebo}}, using \href{https://doc.zeroc.com/ice/3.6/}{\textbf{zeroc-ice}} as a communication middleware, to allow developers with a better simulation support from a more realistic physics engine.
+    \end{itemize}
+    }
+
+\end{cventries}
+
+\vspace*{-\baselineskip}
+
+\cvsection{Thesis}
+
+\begin{cventries}
+\cventry
+   {}
+   {Multi-Quadcopter surveillance system}
+   {IIT Kanpur}
+   {}
+   {
+   \vspace{-3mm}
+   \vspace*{-\baselineskip}
+    \begin{itemize}[leftmargin=6mm]
+        \item {Developed a surveillance system using multiple quadcopters, capable of covering a given area autonomously.}
+        \item {Created a framework that was based on describing a mission plan as \href{https://en.wikipedia.org/wiki/Linear_temporal_logic}{LTL} (\textbf{Linear Temporal Logic}) specifications and solve it by using a \href{https://pypi.org/project/z3-solver/}{\textbf{SMT solver (Z3-solver)}}  to get an optimal solution.}
+    \end{itemize}
+   }
+\end{cventries}
+
+
+
+\vspace*{-\baselineskip}
+% Skills
+\cvsection{Skills}
+\begin{cventries}
+
+    \cventry
+       {Utilities}
+       {}
+       {}
+       {}
+       {
+        Linux Shell \textbullet{} \LaTeX \textbullet{} Git \textbullet{} Docker \textbullet{} Vim \textbullet{} Kubernetes
+       }
+
+\vspace{2mm}
+
+    \cventry
+       {Programming}
+       {}
+       {}
+       {}
+       {
+        Java \textbullet{} Python \textbullet{} C/C++ \textbullet{} HTML/CSS  \textbullet{}
+        JavaScript \textbullet{} SQL  
+       }
+
+\vspace{2mm}
+
+    \cventry
+        {Databases}
+        {}
+        {}
+        {}
+        {
+         Aerospike \textbullet{} HBase \textbullet{} Redis \textbullet{} Clickhouse \textbullet{} MySQL
+        }
+
+\vspace{2mm}
+
+    \cventry
+       {Tools \& Frameworks}
+       {}
+       {}
+       {}
+       {
+        Kafka \textbullet{} Debezium \textbullet{} Rabbbitmq \textbullet{} Celery \textbullet{} PyTorch \newline Playwright \textbullet{} BeautifulSoup  \textbullet{} FastAPI \textbullet{} Spark  \textbullet{} Springboot Dropwizard \textbullet{} Django \textbullet{} Angular \textbullet{} Dataproc
+       }
+
+\end{cventries}
+
+% Honors
+\cvsection{Scholastic Achievements} 
+\begin{itemize}[leftmargin=6mm]
+    \item \descriptionstyle{Secured rank \textbf{3146} at National level in \textbf{JEE Mains} \\ 
+     2016 among \textbf{1.13 million} students.}
+    \item \descriptionstyle{Secured rank \textbf{2477} at National level in \textbf{JEE Advanced} \\
+    2016 among \textbf{198,000} students.}
+\end{itemize}
+
+% Column two
+\end{minipage}
+\end{document}  
